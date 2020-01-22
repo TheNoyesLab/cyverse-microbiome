@@ -9,3 +9,5 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 RUN Rscript -e "install.packages(c('glmnet', 'latticeExtra'))"
 RUN Rscript -e 'source("http://bioconductor.org/biocLite.R")' -e 'biocLite(c("dada2", "decontam", "metagenomeSeq", "phyloseq"))'
+
+ENV PASSWORD=rstudio1
